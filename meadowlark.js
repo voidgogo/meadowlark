@@ -18,7 +18,7 @@ app.engine('.hbs', expressHandlebars({
         }
     }
 }))
-//app.set('view engine', 'handlebars')
+
 app.set('view engine', '.hbs')
 
 app.use(express.static(__dirname + '/public'))
@@ -26,6 +26,8 @@ app.use(express.static(__dirname + '/public'))
 app.get('/', handlers.home)
 
 app.get('/about', handlers.about)
+
+app.get('/section-test', handlers.sectionTest)
 
 app.use(handlers.notFound)
 
